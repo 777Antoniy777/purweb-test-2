@@ -1,0 +1,114 @@
+.intro {
+  display: flex;
+  min-height: 1030px;
+  padding-top: 350px;
+  font-size: 32px;
+  line-height: 34px;
+  background-image: url("../assets/images/intro-bg.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: $c-pale-slate;
+
+  .site-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include reset-margin;
+    padding-bottom: 72px;
+    font-size: 80px;
+    line-height: 82px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+  }
+
+  &__scroll-button-wrapper {
+    display: flex;
+    width: 190px;
+    min-height: 71px;
+    margin-bottom: 75px;
+    padding: 10px;
+    background-color: $c-white;
+    border: 1px solid $c-valhalla;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 0 rgba($c-black, 0.25);
+  }
+
+  &__scroll-button {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $c-white;
+    background-color: $c-valhalla;
+    border: none;
+    border-radius: 25px;
+  }
+
+  &__list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(3, 236px);
+    grid-template-rows: auto;
+    column-gap: 40px;
+    margin-top: auto;
+    transform: translateY(100%);
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 220px;
+      background-image: url("../assets/images/svg/worldwide-icon.svg");
+      background-position: 50% 66px;
+      background-repeat: no-repeat;
+      background-color: $c-radical-red;
+      transform: translateY(-100%);
+    }
+
+    p {
+      background-color: $c-mandy;
+    }
+
+    &--red {
+      &::before {
+        background-image: url("../assets/images/svg/hearts-icon.svg");
+        background-color: $c-alizarin-crimson;
+      }
+
+      p {
+        background-color: $c-cardinal;
+      }
+    }
+
+    &--orange {
+      &::before {
+        background-image: url("../assets/images/svg/wifi-icon.svg");
+        background-color: $c-blaze-orange;
+      }
+
+      p {
+        background-color: $c-clementine;
+      }
+    }
+  }
+
+  &__description {
+    @include reset-margin;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $c-white;
+  }
+}

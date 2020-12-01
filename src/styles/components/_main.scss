@@ -1,7 +1,3 @@
 .main {
   position: relative;
-
-  &__title {
-    @include visually-hidden;
-  }
 }

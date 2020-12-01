@@ -3,32 +3,9 @@
   top: 0;
   width: 100%;
   padding: 32px 0;
-  background-color: $c-royal-blue;
-
-  @media (max-width: $media-tb) {
-    position: static;
-    margin-bottom: -166px;
-    padding-bottom: 0;
-  }
+  background-color: lightblue;
 
   .site-wrapper {
-    max-width: 1160px;
-
-    @media (max-width: $media-tb) {
-      max-width: none;
-      width: 100%;
-    }
-  }
-}
-
-// menu open
-.menu-open .main-header {
-  margin-bottom: 0;
-}
-
-// js off
-.no-js .main-header {
-  @media (max-width: $media-tb) {
-    margin-bottom: 0;
+    max-width: 1670px;
   }
 }
