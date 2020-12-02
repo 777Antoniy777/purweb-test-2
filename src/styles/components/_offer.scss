@@ -1,0 +1,62 @@
+.offer {
+  display: flex;
+  min-height: 730px;
+  background-image:
+    url("../assets/images/offer-bg.png"),
+    url("../assets/images/offer-gradient-bg.jpg");
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+  background-color: $c-bossanova-2;
+  color: $c-bossanova-2;
+
+  .site-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 374px;
+    min-height: 374px;
+    width: 100%;
+    padding-top: 106px;
+    padding-left: 17px;
+  }
+
+  &__title {
+    @include reset-margin;
+    padding-bottom: 8px;
+    font-size: 60px;
+    line-height: 62px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    @include reset-margin;
+    padding-bottom: 22px;
+    font-size: 46px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 139px;
+    min-height: 39px;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $c-white;
+    background-image: linear-gradient(to left, #f9b416 0%, #e22028 100%);
+    border-radius: 5px;
+  }
+}
