@@ -21,9 +21,13 @@
 
   &__button-wrapper {
     align-self: flex-end;
+    display: flex;
+    align-items: center;
     margin-bottom: 100px;
 
     span {
+      padding-top: 4px;
+      padding-right: 5px;
       font-size: 18px;
       line-height: 20px;
       text-transform: uppercase;
@@ -31,10 +35,9 @@
   }
 
   &__menu-button {
-    display: none;
     width: 40px;
     height: 40px;
-    // background-image: url("../assets/images/svg/burger-menu-icon.svg");
+    padding: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -52,6 +55,11 @@
     // active
     &:active {
       opacity: 0.5;
+    }
+
+    i {
+      font-size: 42px;
+      color: $c-alizarin-crimson;
     }
   }
 }

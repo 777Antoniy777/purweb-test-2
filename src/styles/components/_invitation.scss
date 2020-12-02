@@ -1,0 +1,171 @@
+.invitation {
+  padding-top: 26px;
+
+  .site-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include reset-margin;
+    position: relative;
+    padding-bottom: 38px;
+    padding-left: 68px;
+    font-size: 52px;
+    line-height: 54px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 57px;
+      height: 59px;
+      background-image: url("../assets/images/svg/heart-icon.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__quote-wrapper {
+    @include reset-margin;
+    margin-bottom: 37px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &__quote {
+    @include reset-margin;
+    max-width: 790px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__author {
+    padding-right: 2px;
+    text-align: right;
+    color: $c-radical-red;
+  }
+
+  &__form-wrapper {
+    background-image: url("../assets/images/invitation-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__form {
+    max-width: 466px;
+    width: 100%;
+    padding: 56px 74px 67px;
+    border: 8px solid black;
+    border-image: linear-gradient(to left, #f9b416 0%, #e22028 100%) 30;
+    transform: translateY(16px);
+  }
+
+  &__form-title {
+    @include reset-margin;
+    padding-bottom: 40px;
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__facebook-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 10px 12px 17px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: $c-white;
+    background-color: $c-sapphire;
+    border-radius: 5px;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 14px;
+      padding-right: 14px;
+      background-image: url("../assets/images/svg/facebook-icon.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__inner-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 2px;
+      background-color: $c-dusty-gray;
+      transform: translateY(-50%);
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 80%;
+      padding: 0 10px;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $c-dusty-gray;
+      background-color: $c-white;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 41px;
+    margin-bottom: 12px;
+    padding: 0 12px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    color: $c-bossanova;
+    border: 2px solid $c-alto;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+      color: $c-bossanova;
+    }
+  }
+
+  &__form-button {
+    width: 100%;
+    min-height: 41px;
+    padding: 5px 10px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $c-white;
+    background-color: $c-vivid-violet;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

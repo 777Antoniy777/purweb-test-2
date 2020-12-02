@@ -29,7 +29,9 @@
             <div class="nav__button-wrapper">
               <span>Menu</span>
 
-              <button class="nav__menu-button" type="button" aria-label="Mobile menu"></button>
+              <button class="nav__menu-button" type="button" aria-label="Mobile menu">
+                <i class="material-icons">menu</i>
+              </button>
             </div>
           </div>
         </nav>
@@ -42,9 +44,12 @@
         <div class="site-wrapper">
           <h1 class="intro__title">Find someone to click with</h1>
 
-          <div class="intro__scroll-button-wrapper">
-            <button class="intro__scroll-button" type="button">Get started</button>
-          </div>
+          <button class="intro__scroll-button" type="button">
+            <p>
+              <span>Get started</span>
+              <i class="material-icons">keyboard_backspace</i>
+            </p>
+          </button>
 
           <ul class="intro__list">
             <li class="intro__item">
@@ -64,30 +69,38 @@
 
       <section class="main__invitation invitation">
         <div class="site-wrapper">
+          <h2 class="invitation__title">Welcome!</h2>
+
           <figure class="invitation__quote-wrapper">
-            <h2 class="invitation__quote"><q>Love is a promise, love is a souvenir, once given never forgot</q></h2>
+            <p class="invitation__quote"><q>Love is a promise, love is a souvenir, once given never forgotten, never let it disappear.</q></p>
 
             <figcaption class="invitation__author">- John Lennon</figcaption>
           </figure>
+        </div>
 
-          <form class="invitation__form" action="#" method="POST">
-            <h2 class="invitation__title">It`s free to join</h2>
+        <div class="invitation__form-wrapper">
+          <div class="site-wrapper">
+            <form class="invitation__form" action="#" method="POST">
+              <h3 class="invitation__form-title">It`s free to join</h3>
 
-            <a class="invitation__facebook-link" href="#">Sign up with Facebook</a>
+              <a class="invitation__facebook-link" href="#">Sign up with Facebook</a>
 
-            <span>or</span>
+              <div class="invitation__inner-wrapper">
+                <span>or</span>
+              </div>
 
-            <input type="email" name="email" placeholder="Email" aria-label="Type your email" required>
-            <input type="text" name="name" placeholder="Username" aria-label="Type your username" required>
-            <input type="password" name="password" placeholder="Password" aria-label="Type your password" required>
-            <input type="password" name="repeating-password" placeholder="Confirm password" aria-label="Repeat your password" required>
+              <input type="email" name="email" placeholder="Email" aria-label="Type your email" required>
+              <input type="text" name="name" placeholder="Username" aria-label="Type your username" required>
+              <input type="password" name="password" placeholder="Password" aria-label="Type your password" required>
+              <input type="password" name="repeating-password" placeholder="Confirm password" aria-label="Repeat your password" required>
 
-            <button class="invitation__form-button" type="submit">Let`s go!</button>
-          </form>
+              <button class="invitation__form-button" type="submit">Let`s go!</button>
+            </form>
+          </div>
         </div>
       </section>
 
-      <section class="offer">
+      <section class="main__offer offer">
         <div class="site-wrapper">
           <h2 class="offer__title">Join now</h2>
           <p class="offer__description">It`s free!</p>
