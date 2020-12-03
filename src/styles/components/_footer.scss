@@ -1,0 +1,302 @@
+.main-footer {
+  padding-top: 33px;
+  padding-bottom: 12px;
+
+  .site-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__form-wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 61px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      margin-right: 14px;
+      color: $c-caribbean-green;
+      cursor: pointer;
+    }
+
+    input {
+      max-width: 258px;
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      font-family: $lato;
+      color: $c-black;
+      border: 1px solid #cdcdcd;
+      border-right: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 18px;
+        color: $c-silver;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 40px;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $c-white;
+    background-color: $c-caribbean-green;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__link-list-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 29px;
+  }
+
+  &__link-list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: auto;
+    column-gap: 58px;
+  }
+
+  &__link-item {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      text-transform: lowercase;
+    }
+  }
+
+  &__flag-list-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 828px;
+    width: 100%;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  &__flag-list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__flag-item {
+    margin-right: 11px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      width: 16px;
+      height: 11px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+
+      span {
+        @include visually-hidden;
+      }
+    }
+
+    &--czech {
+      a {
+        background-image: url("../assets/images/svg/czech-icon.svg");
+      }
+    }
+
+    &--greek {
+      a {
+        background-image: url("../assets/images/svg/greek-icon.svg");
+      }
+    }
+
+    &--english {
+      a {
+        background-image: url("../assets/images/svg/english-icon.svg");
+      }
+    }
+
+    &--taiwanese {
+      a {
+        background-image: url("../assets/images/svg/taiwanese-icon.svg");
+      }
+    }
+
+    &--japanese {
+      a {
+        background-image: url("../assets/images/svg/japanese-icon.svg");
+      }
+    }
+
+    &--bosnian {
+      a {
+        background-image: url("../assets/images/svg/bosnian-icon.svg");
+      }
+    }
+
+    &--german {
+      a {
+        background-image: url("../assets/images/svg/german-icon.svg");
+      }
+    }
+
+    &--italian {
+      a {
+        background-image: url("../assets/images/svg/italian-icon.svg");
+      }
+    }
+
+    &--dutch {
+      a {
+        background-image: url("../assets/images/svg/dutch-icon.svg");
+      }
+    }
+
+    &--chinese {
+      a {
+        background-image: url("../assets/images/svg/chinese-icon.svg");
+      }
+    }
+
+    &--arabic {
+      a {
+        background-image: url("../assets/images/svg/arabic-icon.svg");
+      }
+    }
+
+    &--french {
+      a {
+        background-image: url("../assets/images/svg/french-icon.svg");
+      }
+    }
+
+    &--slovenian {
+      a {
+        background-image: url("../assets/images/svg/slovenian-icon.svg");
+      }
+    }
+
+    &--spanish {
+      a {
+        background-image: url("../assets/images/svg/spanish-icon.svg");
+      }
+    }
+
+    &--korean {
+      a {
+        background-image: url("../assets/images/svg/korean-icon.svg");
+      }
+    }
+
+    &--portuguese {
+      a {
+        background-image: url("../assets/images/svg/portuguese-icon.svg");
+      }
+    }
+
+    &--norwegian {
+      a {
+        background-image: url("../assets/images/svg/norwegian-icon.svg");
+      }
+    }
+
+    &--russian {
+      a {
+        background-image: url("../assets/images/svg/russian-icon.svg");
+      }
+    }
+
+    &--polish {
+      a {
+        background-image: url("../assets/images/svg/polish-icon.svg");
+      }
+    }
+
+    &--swedish {
+      a {
+        background-image: url("../assets/images/svg/swedish-icon.svg");
+      }
+    }
+
+    &--romanian {
+      a {
+        background-image: url("../assets/images/svg/romanian-icon.svg");
+      }
+    }
+
+    &--danish {
+      a {
+        background-image: url("../assets/images/svg/danish-icon.svg");
+      }
+    }
+
+    &--turkey {
+      a {
+        background-image: url("../assets/images/svg/turkey-icon.svg");
+      }
+    }
+
+    &--slovak {
+      a {
+        background-image: url("../assets/images/svg/slovak-icon.svg");
+      }
+    }
+
+    &--vietnamese {
+      a {
+        background-image: url("../assets/images/svg/vietnamese-icon.svg");
+      }
+    }
+
+    &--croatian {
+      a {
+        background-image: url("../assets/images/svg/croatian-icon.svg");
+      }
+    }
+
+    &--thai {
+      a {
+        background-image: url("../assets/images/svg/thai-icon.svg");
+      }
+    }
+  }
+
+  &__description {
+    @include reset-margin;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    font-family: $lato;
+  }
+}
