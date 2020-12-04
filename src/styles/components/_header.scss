@@ -8,5 +8,9 @@
   .site-wrapper {
     max-width: 1676px;
     width: 100%;
+
+    @media (max-width: $media-dt) {
+      width: 90%;
+    }
   }
 }

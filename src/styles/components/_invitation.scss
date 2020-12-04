@@ -20,6 +20,11 @@
     text-align: center;
     text-transform: uppercase;
 
+    @media (max-width: $media-tb) {
+      font-size: 45px;
+      line-height: 47px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -45,6 +50,10 @@
     max-width: 790px;
     width: 100%;
     text-align: center;
+
+    @media (max-width: $media-dt) {
+      padding-bottom: 20px;
+    }
   }
 
   &__author {
@@ -54,9 +63,13 @@
   }
 
   &__form-wrapper {
-    background-image: url("../assets/images/invitation-bg.png");
+    background-image: url("../assets/images/invitation-bg@1x.png");
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../assets/images/invitation-bg@2x.png");
+    }
   }
 
   &__form {
@@ -66,6 +79,10 @@
     border: 8px solid black;
     border-image: linear-gradient(to left, #f9b416 0%, #e22028 100%) 30;
     transform: translateY(16px);
+
+    @media (max-width: $media-tb) {
+      padding: 10px;
+    }
   }
 
   &__form-title {
@@ -150,7 +167,7 @@
 
     &::placeholder {
       font-size: 16px;
-      line-height: 18px;
+      line-height: 38px;
       letter-spacing: 0.5px;
       text-transform: capitalize;
       color: $c-bossanova;

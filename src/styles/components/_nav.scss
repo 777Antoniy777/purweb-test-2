@@ -17,6 +17,20 @@
 
   &__logo-wrapper {
     width: 447px;
+
+    @media (max-width: $media-dt) {
+      width: 280px;
+    }
+  }
+
+  &__logo {
+    width: 447px;
+    height: 282px;
+
+    @media (max-width: $media-dt) {
+      width: 280px;
+      height: 168px;
+    }
   }
 
   &__button-wrapper {

@@ -2,12 +2,18 @@
   display: flex;
   min-height: 730px;
   background-image:
-    url("../assets/images/offer-bg.png"),
-    url("../assets/images/offer-gradient-bg.jpg");
+    url("../assets/images/offer-bg@1x.png"),
+    url("../assets/images/offer-gradient-bg@1x.jpg");
   background-position: center, center;
   background-repeat: no-repeat, repeat;
-  background-color: $c-bossanova-2;
+  background-color: $c-vivid-violet;
   color: $c-bossanova-2;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../assets/images/offer-bg@2x.png"),
+      url("../assets/images/offer-gradient-bg@2x.jpg");
+  }
 
   .site-wrapper {
     display: flex;
@@ -26,6 +32,14 @@
     width: 100%;
     padding-top: 106px;
     padding-left: 17px;
+
+    @media (max-width: $media-tb) {
+      justify-content: center;
+      max-width: 280px;
+      min-height: 374px;
+      padding-top: 0;
+      padding-left: 0;
+    }
   }
 
   &__title {
@@ -36,6 +50,11 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: $media-tb) {
+      font-size: 34px;
+      line-height: 36px;
+    }
   }
 
   &__description {
@@ -44,6 +63,11 @@
     font-size: 46px;
     line-height: 48px;
     text-align: center;
+
+    @media (max-width: $media-tb) {
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
 
   &__link {

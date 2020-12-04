@@ -12,17 +12,30 @@
     max-width: 800px;
     width: 100%;
     margin-bottom: 61px;
+
+    @media (max-width: $media-tb) {
+      margin-bottom: 45px;
+    }
   }
 
   &__form {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     label {
       margin-right: 14px;
       color: $c-caribbean-green;
       cursor: pointer;
+
+      @media (max-width: $media-tb) {
+        flex-grow: 1;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
     }
 
     input {
@@ -40,9 +53,14 @@
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
 
+      @media (max-width: $media-tb) {
+        max-width: 400px;
+        margin-bottom: 20px;
+      }
+
       &::placeholder {
         font-size: 16px;
-        line-height: 18px;
+        line-height: 38px;
         color: $c-silver;
       }
     }
@@ -63,6 +81,11 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
+
+    @media (max-width: $media-tb) {
+      max-width: 400px;
+      width: 100%;
+    }
   }
 
   &__link-list-wrapper {
@@ -79,6 +102,14 @@
     grid-template-columns: repeat(7, auto);
     grid-template-rows: auto;
     column-gap: 58px;
+
+    @media (max-width: $media-dt) {
+      column-gap: 20px;
+    }
+
+    @media (max-width: $media-tb) {
+      grid-template-columns: repeat(2, auto);
+    }
   }
 
   &__link-item {
@@ -97,7 +128,7 @@
     max-width: 828px;
     width: 100%;
     margin-bottom: 12px;
-    padding-bottom: 6px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #d3d3d3;
   }
 
@@ -114,181 +145,6 @@
 
     &:last-child {
       margin-right: 0;
-    }
-
-    a {
-      display: inline-block;
-      vertical-align: top;
-      width: 16px;
-      height: 11px;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-
-      span {
-        @include visually-hidden;
-      }
-    }
-
-    &--czech {
-      a {
-        background-image: url("../assets/images/svg/czech-icon.svg");
-      }
-    }
-
-    &--greek {
-      a {
-        background-image: url("../assets/images/svg/greek-icon.svg");
-      }
-    }
-
-    &--english {
-      a {
-        background-image: url("../assets/images/svg/english-icon.svg");
-      }
-    }
-
-    &--taiwanese {
-      a {
-        background-image: url("../assets/images/svg/taiwanese-icon.svg");
-      }
-    }
-
-    &--japanese {
-      a {
-        background-image: url("../assets/images/svg/japanese-icon.svg");
-      }
-    }
-
-    &--bosnian {
-      a {
-        background-image: url("../assets/images/svg/bosnian-icon.svg");
-      }
-    }
-
-    &--german {
-      a {
-        background-image: url("../assets/images/svg/german-icon.svg");
-      }
-    }
-
-    &--italian {
-      a {
-        background-image: url("../assets/images/svg/italian-icon.svg");
-      }
-    }
-
-    &--dutch {
-      a {
-        background-image: url("../assets/images/svg/dutch-icon.svg");
-      }
-    }
-
-    &--chinese {
-      a {
-        background-image: url("../assets/images/svg/chinese-icon.svg");
-      }
-    }
-
-    &--arabic {
-      a {
-        background-image: url("../assets/images/svg/arabic-icon.svg");
-      }
-    }
-
-    &--french {
-      a {
-        background-image: url("../assets/images/svg/french-icon.svg");
-      }
-    }
-
-    &--slovenian {
-      a {
-        background-image: url("../assets/images/svg/slovenian-icon.svg");
-      }
-    }
-
-    &--spanish {
-      a {
-        background-image: url("../assets/images/svg/spanish-icon.svg");
-      }
-    }
-
-    &--korean {
-      a {
-        background-image: url("../assets/images/svg/korean-icon.svg");
-      }
-    }
-
-    &--portuguese {
-      a {
-        background-image: url("../assets/images/svg/portuguese-icon.svg");
-      }
-    }
-
-    &--norwegian {
-      a {
-        background-image: url("../assets/images/svg/norwegian-icon.svg");
-      }
-    }
-
-    &--russian {
-      a {
-        background-image: url("../assets/images/svg/russian-icon.svg");
-      }
-    }
-
-    &--polish {
-      a {
-        background-image: url("../assets/images/svg/polish-icon.svg");
-      }
-    }
-
-    &--swedish {
-      a {
-        background-image: url("../assets/images/svg/swedish-icon.svg");
-      }
-    }
-
-    &--romanian {
-      a {
-        background-image: url("../assets/images/svg/romanian-icon.svg");
-      }
-    }
-
-    &--danish {
-      a {
-        background-image: url("../assets/images/svg/danish-icon.svg");
-      }
-    }
-
-    &--turkey {
-      a {
-        background-image: url("../assets/images/svg/turkey-icon.svg");
-      }
-    }
-
-    &--slovak {
-      a {
-        background-image: url("../assets/images/svg/slovak-icon.svg");
-      }
-    }
-
-    &--vietnamese {
-      a {
-        background-image: url("../assets/images/svg/vietnamese-icon.svg");
-      }
-    }
-
-    &--croatian {
-      a {
-        background-image: url("../assets/images/svg/croatian-icon.svg");
-      }
-    }
-
-    &--thai {
-      a {
-        background-image: url("../assets/images/svg/thai-icon.svg");
-      }
     }
   }
 
