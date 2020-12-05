@@ -71,6 +71,7 @@
   }
 
   &__link {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +83,31 @@
     color: $c-white;
     background-image: linear-gradient(to left, #f9b416 0%, #e22028 100%);
     border-radius: 5px;
+    transition: box-shadow 0.3s;
     cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($c-black, 0.07);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    // hover
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
+    }
+
+    // active
+    &:active {
+      box-shadow: inset 0 2px 5px 0 rgba($c-black, 0.35);
+    }
   }
 }

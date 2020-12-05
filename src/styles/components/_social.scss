@@ -23,9 +23,21 @@
       height: 24px;
       background-position: 0 0;
       background-repeat: no-repeat;
+      transition: opacity 0.3s;
 
       span {
         @include visually-hidden;
+      }
+
+      // hover
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      // active
+      &:active {
+        opacity: 0.5;
       }
     }
 

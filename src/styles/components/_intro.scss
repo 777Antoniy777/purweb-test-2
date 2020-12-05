@@ -69,6 +69,7 @@
       background-color: $c-vivid-violet;
       border: none;
       border-radius: 30px;
+      transition: background-color 0.3s;
     }
 
     span {
@@ -78,6 +79,16 @@
     i {
       display: block;
       transform: rotate(-90deg);
+    }
+
+    // hover
+    &:hover p,
+    &:focus p {
+      background-color: rgba($c-vivid-violet, 0.7);
+    }
+
+    &:active p {
+      background-color: rgba($c-vivid-violet, 0.5);
     }
   }
 
