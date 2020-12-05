@@ -1,264 +1,186 @@
 .intro {
-  position: relative;
-  margin-bottom: 137px;
-  padding-top: 260px;
-  padding-bottom: 48px;
-  font-size: 16px;
-  line-height: 29px;
-  background-image: url("../assets/images/background.png");
+  display: flex;
+  min-height: 1030px;
+  margin-bottom: 220px;
+  padding-top: 518px;
+  font-size: 32px;
+  line-height: 34px;
+  background-image: url("../assets/images/intro-bg@1x.jpg");
   background-size: cover;
-  background-position: 50% 0;
+  background-position: center;
   background-repeat: no-repeat;
-  background-color: $c-royal-blue;
+  background-color: $c-pale-slate;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../assets/images/background@2x.png");
+    background-image: url("../assets/images/intro-bg@2x.jpg");
   }
 
   @media (max-width: $media-dt) {
-    margin-bottom: 90px;
-  }
-
-  @media (max-width: $media-tb) {
-    margin-bottom: 50px;
-    padding-top: 215px;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    height: 250px;
-
-    @media (max-width: $media-tb) {
-      height: 110px;
-    }
-  }
-
-  &::before {
-    left: 0;
-    background-image: linear-gradient(to right top, white 50%, transparent 50%);
-  }
-
-  &::after {
-    right: 0;
-    background-image: linear-gradient(to left top, white 50%, transparent 50%);
+    min-height: 890px;
+    padding-top: 400px;
   }
 
   .site-wrapper {
-    position: relative;
-    max-width: 1600px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  &__slider-wrapper {
-    max-width: 1152px;
-    margin: 0 auto 94px;
+  &__title {
+    @include reset-margin;
+    padding-bottom: 61px;
+    font-size: 80px;
+    line-height: 82px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
 
-    @media (max-width: $media-tb) {
-      margin-bottom: 20px;
+    @media (max-width: $media-dt) {
+      font-size: 60px;
+      line-height: 62px;
     }
   }
 
-  &__list,
-  &__control-list {
+  &__scroll-button {
+    width: 190px;
+    min-height: 71px;
+    margin-bottom: 188px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $c-white;
+    background-color: $c-white;
+    border: 1px solid $c-vivid-violet;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 0 rgba($c-black, 0.25);
+    cursor: pointer;
+
+    p {
+      @include reset-margin;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 49px;
+      width: 100%;
+      height: 100%;
+      background-color: $c-vivid-violet;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s;
+    }
+
+    span {
+      padding-right: 10px;
+    }
+
+    i {
+      display: block;
+      transform: rotate(-90deg);
+    }
+
+    // hover
+    &:hover p,
+    &:focus p {
+      background-color: rgba($c-vivid-violet, 0.7);
+    }
+
+    &:active p {
+      background-color: rgba($c-vivid-violet, 0.5);
+    }
+  }
+
+  &__list {
     @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(3, 236px);
+    grid-template-rows: auto;
+    column-gap: 40px;
+    margin-top: auto;
+    transform: translateY(100%);
+
+    @media (max-width: $media-dt) {
+      grid-template-columns: repeat(3, minmax(184px, 236px));
+    }
+
+    @media (max-width: $media-tb) {
+      grid-template-columns: 1fr;
+      width: 100%;
+      transform: translateY(0);
+    }
   }
 
   &__item {
-    padding-left: 78px;
-    padding-bottom: 40px;
-
-    @media (max-width: $media-tb) {
-      padding-right: 30px;
-      padding-left: 20px;
-    }
-  }
-
-  &__item-wrapper {
     position: relative;
-    width: 100%;
-    padding-right: 47%;
 
     @media (max-width: $media-tb) {
-      padding-right: 0;
+      display: flex;
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 74px;
-      right: 148px;
-      width: 149px;
-      height: 121px;
-      background-image: url("../assets/images/svg/twitter.svg");
-      background-position: 0 0;
+      width: 100%;
+      height: 220px;
+      background-image: url("../assets/images/svg/worldwide-icon.svg");
+      background-position: 50% 66px;
       background-repeat: no-repeat;
+      background-color: $c-radical-red;
+      transform: translateY(-100%);
 
       @media (max-width: $media-tb) {
-        background-image: none;
+        position: static;
+        display: inline-block;
+        vertical-align: top;
+        min-width: 170px;
+        max-width: 170px;
+        transform: translateY(0);
+      }
+    }
+
+    p {
+      background-color: $c-mandy;
+    }
+
+    &--red {
+      &::before {
+        background-image: url("../assets/images/svg/hearts-icon.svg");
+        background-color: $c-alizarin-crimson;
+      }
+
+      p {
+        background-color: $c-cardinal;
+      }
+    }
+
+    &--orange {
+      &::before {
+        background-image: url("../assets/images/svg/wifi-icon.svg");
+        background-color: $c-blaze-orange;
+      }
+
+      p {
+        background-color: $c-clementine;
       }
     }
   }
 
-  &__item-title,
-  &__item-description {
-    margin: 0;
-  }
-
-  &__item-title {
-    padding-bottom: 13px;
-    font-size: 55px;
-    line-height: 58px;
-    font-weight: 700;
-    text-transform: capitalize;
-
-    @media (max-width: $media-tb) {
-      font-size: 40px;
-      line-height: 44px;
-    }
-  }
-
-  &__item-description {
-    max-width: 468px;
-    padding-bottom: 44px;
-    padding-left: 4px;
-    font-weight: 600;
-
-    @media (max-width: $media-tb) {
-      padding-bottom: 20px;
-    }
-  }
-
-  &__item-link {
-    min-height: 54px;
-    width: 174px;
-    margin-left: 3px;
-  }
-
-  &__scroll-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1152px;
-    margin: 0 auto;
-  }
-
-  &__scroll-description {
+  &__description {
     @include reset-margin;
-    padding-bottom: 23px;
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: 700;
+    display: block;
+    padding: 38px 20px;
     text-align: center;
-    text-transform: uppercase;
-  }
-
-  &__scroll-button {
-    position: relative;
-    z-index: 1;
-    width: 61px;
-    height: 71px;
-    background-image: url("../assets/images/svg/scroll-button.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s;
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      height: 5px;
-      background-color: $c-pizazz;
-      border-radius: 5px;
-    }
-
-    &::before {
-      top: 33px;
-      left: 14px;
-      width: 20px;
-      transform: rotate(40deg);
-    }
-
-    &::after {
-      top: 32px;
-      right: 17px;
-      width: 16px;
-      transform: rotate(-40deg);
-    }
-
-    // hover
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-    }
-  }
-
-  // control
-  &__control-wrapper {
-    position: absolute;
-    top: 78px;
-    right: 57px;
+    text-transform: capitalize;
+    color: $c-white;
 
     @media (max-width: $media-tb) {
-      right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
     }
-  }
-
-  &__control-button {
-    display: block;
-    width: 14px;
-    height: 18px;
-    margin-bottom: 17px;
-    background-image: url("../assets/images/svg/icon-empty-button.svg");
-    background-size: 14px 18px;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s, opacity 0.3s;
-    cursor: pointer;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    // hover
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-    }
-
-    // active
-    &:active {
-      opacity: 0.7;
-    }
-  }
-
-  &__control-button.tns-nav-active {
-    background-image: url("../assets/images/svg/icon-button.svg");
-    opacity: 1;
-    transform: scale(1.5);
-    cursor: auto;
-  }
-}
-
-// menu open
-.menu-open .intro {
-  @media (max-width: $media-tb) {
-    padding-top: 90px;
-  }
-}
-
-// js off
-.no-js .intro {
-  @media (max-width: $media-tb) {
-    padding-top: 90px;
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "purrweb-test",
+  "name": "purrweb-test-2",
   "version": "1.0.0",
-  "description": "purrweb-test",
+  "description": "purrweb-test-2",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/777Antoniy777/purweb-test.git"
+    "url": "git+https://github.com/777Antoniy777/purweb-test-2.git"
   },
   "author": "Tony <tat7106@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/777Antoniy777/purweb-test/issues"
+    "url": "https://github.com/777Antoniy777/purweb-test-2/issues"
   },
-  "homepage": "https://github.com/777Antoniy777/purweb-test#readme",
+  "homepage": "https://github.com/777Antoniy777/purweb-test-2#readme",
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -67,9 +67,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
-    "imask": "^6.0.5",
-    "normalize.css": "^8.0.1",
-    "smoothscroll-polyfill": "^0.4.4",
-    "tiny-slider": "^2.9.3"
+    "material-design-icons": "^3.0.1",
+    "normalize.css": "^8.0.1"
   }
 }

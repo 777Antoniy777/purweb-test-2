@@ -1,0 +1,64 @@
+.social {
+  position: fixed;
+  top: 38.5%;
+  left: 0;
+  z-index: 2;
+  width: 50px;
+  padding: 17px 12px;
+  background-color: $c-valentino;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__item {
+    margin-bottom: 22px;
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      width: 24px;
+      height: 24px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      transition: opacity 0.3s;
+
+      span {
+        @include visually-hidden;
+      }
+
+      // hover
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      // active
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--sharing a {
+      background-image: url("../assets/images/svg/sharing-icon.svg");
+    }
+
+    &--facebook a {
+      background-image: url("../assets/images/svg/facebook-icon-2.svg");
+    }
+
+    &--instagram a {
+      background-image: url("../assets/images/svg/inst-icon.svg");
+    }
+
+    &--twitter a {
+      background-image: url("../assets/images/svg/twitter-icon.svg");
+    }
+  }
+}

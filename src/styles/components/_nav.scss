@@ -8,31 +8,50 @@
   font-size: 14px;
   line-height: 18px;
 
-  @media (max-width: $media-tb) {
-    flex-wrap: wrap;
-    padding-left: 0;
-  }
-
   &__top-menu-wrapper {
-    @media (max-width: $media-tb) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 0 20px 20px;
-    }
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
   }
 
   &__logo-wrapper {
-    min-width: 78px;
-    margin-right: 40px;
+    width: 447px;
+
+    @media (max-width: $media-dt) {
+      width: 280px;
+    }
+  }
+
+  &__logo {
+    width: 447px;
+    height: 282px;
+
+    @media (max-width: $media-dt) {
+      width: 280px;
+      height: 168px;
+    }
+  }
+
+  &__button-wrapper {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+
+    span {
+      padding-top: 4px;
+      padding-right: 5px;
+      font-size: 18px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
   }
 
   &__menu-button {
-    display: none;
     width: 40px;
     height: 40px;
-    background-image: url("../assets/images/svg/burger-menu-icon.svg");
+    padding: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -40,10 +59,6 @@
     border-radius: 5px;
     transition: opacity 0.3s;
     cursor: pointer;
-
-    @media (max-width: $media-tb) {
-      display: block;
-    }
 
     // hover
     &:hover,
@@ -55,117 +70,10 @@
     &:active {
       opacity: 0.5;
     }
-  }
 
-  &__list {
-    @include reset-list;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 892px;
-    margin-top: 32px;
-
-    @media (max-width: $media-tb) {
-      display: none;
-      width: 100%;
-      margin-top: 0;
+    i {
+      font-size: 42px;
+      color: $c-alizarin-crimson;
     }
-  }
-
-  &__item {
-    margin-right: 20px;
-    margin-bottom: 10px;
-    padding: 0 5px 4px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    border-bottom: 3px solid transparent;
-
-    @media (max-width: $media-tb) {
-      width: 100%;
-      margin-bottom: 0;
-      padding: 0;
-      text-align: center;
-      border-bottom: none;
-    }
-
-    &:first-child a {
-      @media (max-width: $media-tb) {
-        border-top: 1px solid $c-white;
-      }
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &--active {
-      border-color: $c-pizazz;
-
-      @media (max-width: $media-tb) {
-        color: $c-pizazz;
-      }
-    }
-
-    a {
-      @media (max-width: $media-tb) {
-        display: block;
-        width: 100%;
-        padding: 10px 20px;
-        border-bottom: 1px solid $c-white;
-      }
-
-      // hover
-      &:hover,
-      &:focus {
-        opacity: 0.7;
-
-        @media (max-width: $media-tb) {
-          color: $c-pizazz;
-          opacity: 1;
-        }
-      }
-
-      // active
-      &:active {
-        opacity: 0.5;
-
-        @media (max-width: $media-tb) {
-          color: rgba($c-pizazz, 0.7);
-          opacity: 1;
-        }
-      }
-
-      &:not([href]) {
-        opacity: 1;
-
-        @media (max-width: $media-tb) {
-          color: $c-pizazz;
-        }
-      }
-    }
-  }
-}
-
-// menu open
-.menu-open .nav__list {
-  @media (max-width: $media-tb) {
-    display: block;
-  }
-}
-
-.menu-open .nav__menu-button {
-  background-image: url("../assets/images/svg/close-menu-icon.svg");
-}
-
-// js off
-.no-js .nav__list {
-  @media (max-width: $media-tb) {
-    display: block;
-  }
-}
-
-.no-js .nav__menu-button {
-  @media (max-width: $media-tb) {
-    display: none;
   }
 }

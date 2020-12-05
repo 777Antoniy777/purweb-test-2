@@ -13,13 +13,12 @@ html {
 body {
   min-width: $media-mb;
   margin: 0;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  font-size: 15px;
-  line-height: 22px;
-  font-family: $proxima;
-  color: $c-white;
-  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $dosis;
+  color: $c-valhalla;
 }
 
 .site-wrapper {

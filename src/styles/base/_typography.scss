@@ -1,5 +1,13 @@
-@include font-face("ProximaNova", "../assets/fonts/ProximaNova-Regular");
-@include font-face("ProximaNova", "../assets/fonts/ProximaNova-Semibold", 600);
-@include font-face("ProximaNova", "../assets/fonts/ProximaNova-Bold", 700);
-@include font-face("Rale way", "../assets/fonts/Raleway-SemiBold", 600);
-@include font-face("Rale way", "../assets/fonts/Raleway-ExtraBold", 800);
+@include font-face("Dosis", "../assets/fonts/Dosis-Bold", 700);
+@include font-face("Lato", "../assets/fonts/Lato-Regular", 400);
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"),
+       local("MaterialIcons-Regular"),
+       url("../../node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2") format("woff2"),
+       url("../../node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff") format("woff"),
+       url("../../node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf") format("truetype");
+}
